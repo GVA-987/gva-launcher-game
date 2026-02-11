@@ -1,0 +1,52 @@
+﻿<Window x:Class="GVA_Launcher_Private.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GVA_Launcher_Private"
+        mc:Ignorable="d"
+        Title="GVA Launcher - Private Edition" Height="510" Width="900" Background="#1212" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#B0B0B0"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="20,0,0,0"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#252525"/>
+                    <Setter Property="Foreground" Value="#4CAF50"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#1E1E1E" BorderBrush="#252525" BorderThickness="0,0,1,0">
+            <StackPanel>
+                <TextBlock Text="GVA LAUNCHER" Foreground="#4CAF50" FontSize="20" FontWeight="Bold" Margin="20,30,20,40"/>
+
+                <Button Content="🏠 My Games" Style="{StaticResource MenuButtonStyle}"/>
+                <Button Content="☁️ Cloud Sync" Style="{StaticResource MenuButtonStyle}"/>
+                <Button Content="⚙️ Settings" Style="{StaticResource MenuButtonStyle}"/>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Column="1">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Welcome, Hunter" Foreground="White" FontSize="28" FontWeight="Light"/>
+                <TextBlock Text="Select a game to start your journey" Foreground="#666" FontSize="14" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
