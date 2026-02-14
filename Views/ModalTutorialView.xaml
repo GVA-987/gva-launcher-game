@@ -1,0 +1,44 @@
+﻿<Window x:Class="GVA_Launcher_Private.Views.TutorialView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GVA_Launcher_Private.Views"
+        mc:Ignorable="d"
+        Title="TutorialView" Height="500" Width="420"
+        WindowStyle="None" AllowsTransparency="true" Background="Transparent"
+        WindowStartupLocation="CenterOwner">
+    <Border Style="{StaticResource ModalContainerStyle}">
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="StepTitle" Text="Step 1: Find Icon" 
+                       Style="{StaticResource TutorialTitleStyle}"/>
+
+            <Border Grid.Row="1" Background="#2A2A2A" CornerRadius="12" Margin="0,20">
+                <Image x:Name="TutorialImage" Margin="10" Stretch="Uniform"/>
+            </Border>
+
+            <TextBlock Grid.Row="2" x:Name="StepDescription" 
+                       Style="{StaticResource TutorialDescriptionStyle}"
+                       Margin="0,0,0,30"
+                       Text="Locate your game's shortcut on the desktop or start menu."/>
+
+            <Grid Grid.Row="3">
+                <Button Content="✕" HorizontalAlignment="Left" Width="70"
+                        Style="{StaticResource MenuButtonStyle}" Click="Close_Click" HorizontalContentAlignment="Left"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="BtnBack" Content="Back" Width="80" Margin="0,0,50,0"
+                            Style="{StaticResource MenuButtonStyle}" Click="BtnBack_Click" Visibility="Hidden"/>
+                    <Button x:Name="BtnNext" Content="Next" Width="100" 
+                            Style="{StaticResource PrimaryButtonStyle}" Click="BtnNext_Click"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

@@ -43,8 +43,33 @@
                    Opacity="0.7"/>
                 <Button Content ="➕ ADD NEW GAME" Width="250" Height="70" 
                         Margin="0,40,0,0"
-                        Style="{StaticResource PrimaryButtonStyle}" 
+                        Style="{StaticResource SecondButtonStyle}" 
                         Click="AddGame_Click"/>
+                <Button Content="¿Necesitas ayuda para añadir juegos?" 
+                        Margin="0,20,0,0"
+                        Background="Transparent"
+                        Foreground="#666"
+                        FontSize="15"
+                        Cursor="Hand"
+                        BorderThickness="0"
+                        Click="ShowTutorial_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <TextBlock Text="{TemplateBinding Content}" TextDecorations="Underline" TextAlignment="Center"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="{StaticResource PrimaryGreen}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
             </StackPanel>
         </Grid>

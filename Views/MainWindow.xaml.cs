@@ -20,6 +20,7 @@ namespace GVA_Launcher_Private.Views
         public MainWindow()
         {
             InitializeComponent();
+            this.Loaded += MainWindow_Loaded;
         }
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
@@ -36,6 +37,22 @@ namespace GVA_Launcher_Private.Views
                 // For now, let's just show a message with the path
                 MessageBox.Show("Selected game: " + gamePath, "Game Added!");
             }
+        }
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            AbrirTutorial();
+        }
+
+        private void ShowTutorial_Click(object sender, RoutedEventArgs e)
+        {
+            AbrirTutorial();
+        }
+
+        private void AbrirTutorial()
+        {
+            TutorialView tutorial = new TutorialView();
+            tutorial.Owner = this;
+            tutorial.ShowDialog();
         }
     }
 }
