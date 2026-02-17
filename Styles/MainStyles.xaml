@@ -17,8 +17,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
-                            BorderThickness="0"
-                            Padding="{TemplateBinding Padding}">
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Padding="{TemplateBinding Padding}"
+                            CornerRadius="15">
+                            
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                           VerticalAlignment="Center"/>
                     </Border>
@@ -30,6 +33,7 @@
                 <Setter Property="Background" Value="#2A2A2A"/>
                 <Setter Property="Foreground" Value="{StaticResource PrimaryGreen}"/>
                 <Setter Property="Cursor" Value="Hand"/>
+
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -47,8 +51,8 @@
                         Padding="10"
                         BorderThickness="2"
                         BorderBrush="#303131"
-                    CornerRadius="25" 
-                    SnapsToDevicePixels="True">
+                        CornerRadius="25" 
+                        SnapsToDevicePixels="True">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>

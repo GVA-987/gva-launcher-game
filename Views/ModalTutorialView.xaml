@@ -33,7 +33,7 @@
                         Style="{StaticResource MenuButtonStyle}" Click="Close_Click" HorizontalContentAlignment="Left"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button x:Name="BtnBack" Content="Back" Width="80" Margin="0,0,50,0"
+                    <Button x:Name="BtnBack" Content="Back" Width="80" Margin="0,0,20,0"
                             Style="{StaticResource MenuButtonStyle}" Click="BtnBack_Click" Visibility="Hidden"/>
                     <Button x:Name="BtnNext" Content="Next" Width="100" 
                             Style="{StaticResource PrimaryButtonStyle}" Click="BtnNext_Click"/>
